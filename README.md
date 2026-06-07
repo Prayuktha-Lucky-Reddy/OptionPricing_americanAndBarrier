@@ -1,34 +1,364 @@
-PROJECT TITLE: Monte Carlo Based Option Pricing Model
+# Monte Carlo Based Option Pricing Model
 
-OVERVIEW A Streamlit-based web app to simulate European option pricing using Monte Carlo simulations, with comparisons to Black-Scholes pricing. Useful for finance students, quant developers, and researchers.
+## Live Deployments
 
-FEATURES Real-time stock price data via Yahoo Finance (yfinance) European Call and Put Option pricing using: Monte Carlo simulation Black-Scholes formula American Call and Put Option pricing using: LSMC Method Binomial Tree Method Exotic Call and Put Option pricing using: Asian Option Barrier Option(Up-in and Down-in) Visualization of simulated GBM price paths Intuitive UI with interactive sliders (Streamlit) Volatility estimation from historical data Configurable simulation parameters (strike %, T, N, M, r)
+### European Option Pricing App
 
-TECH STACK Python 3.9+ Streamlit (UI) NumPy, Pandas, Matplotlib yfinance (stock data) SciPy (norm stats)
+[European Option Pricing App](https://montecarlooption-g8o9uw9f9cburuj23zjbaw.streamlit.app/?utm_source=chatgpt.com)
 
-INSTALLATION git clone https://github.com/Nitya-sigadapu/monte_carlo-option.git cd monte_carlo-option pip install -r requirements.txt streamlit run app.py
+Features included:
 
-HOW IT WORKS
+* Monte Carlo Simulation
+* Black-Scholes Pricing
+* Greeks Visualization
+* GBM Path Simulation
 
-Pulls historical stock data (e.g., INFOSYS.NS)
-Estimates volatility from log returns
-Simulates Geometric Brownian Motion paths
-Computes discounted expected payoff for options
-Compares to analytical pricing
-Plots Greeks and price paths
-Plot sensitivity plots and add unit tests
-SAMPLE RESULTS
+---
 
-EUROPEAN
+### American & Barrier Option Pricing App
 
-MONTE CARLO METHOD Put option price : ₹195.88 Call option price : ₹82.62 Greeks (for call) Delta : ₹0.41 Gamma : ₹-.00 Vega : ₹452.87 Theta : ₹-158.50 Rho : ₹288.53
+[American & Barrier Option Pricing App](https://americanbarrier-nu6uyaaja47gznizdmfaeb.streamlit.app/)
 
-BLACK SCHOLES MODEL Put option price : ₹82.73 Call option price : ₹199.86 Greeks Delta : ₹0.40 Gamma : ₹0.00 Vega : ₹439.66 Theta : ₹-152.94 Rho : ₹281.31
+Features included:
 
-REFERENCES 1.Quant Guild https://youtu.be/-1RYvajksjQ?si=ebRkVJXbGWjZGRPG 2.Very Normal s://youtu.be/Cb-GwN6jhNE?si=UhmXr5HEcZEUy5N3 3.httphttps://github.com/just-krivi/option-pricing-models 4.https://youtu.be/OdWLP8umw3A?si=_q1-a6SdZQjyJ0J4 5.https://youtu.be/r7cn3WS5x9c?si=lceJjzmHTvvGq3IU
+* American Option Pricing
+* LSMC Method
+* Binomial Tree Method
+* Barrier Options
+* Asian Options
 
-AUTHOR Github:https://github.com/Nitya-sigadapu Github:https://github.com/thchrn Github:https://github.com/Prayuktha-Lucky-Reddy
+---
+## Project Overview
 
-LICENSE This project is licensed under the MIT License
+The Monte Carlo Based Option Pricing Model is a quantitative finance web application developed using Streamlit that enables users to simulate and price financial derivatives using stochastic simulations and numerical methods.
 
-CONTRIBUTORS Feel free to fork, improve, and submit pull requests. All contributions are welcome!
+The platform supports pricing and analysis of:
+
+* European Options
+* American Options
+* Exotic Options
+
+using advanced quantitative finance techniques such as:
+
+* Monte Carlo Simulation
+* Black-Scholes Analytical Pricing
+* Least Squares Monte Carlo (LSMC)
+* Binomial Tree Methods
+
+The project is designed for finance students, quantitative researchers, and developers interested in computational finance and derivative pricing.
+
+---
+
+# Features
+
+## Real-Time Market Data
+
+* Fetches live historical stock data using Yahoo Finance (`yfinance`)
+* Supports NSE stocks such as `INFOSYS.NS`
+* Automatically estimates volatility using historical log returns
+
+---
+
+# European Option Pricing
+
+Supports:
+
+* European Call Options
+* European Put Options
+
+## Pricing Methods
+
+* Monte Carlo Simulation
+* Black-Scholes Formula
+
+## Greeks Calculation
+
+Computes:
+
+* Delta
+* Gamma
+* Vega
+* Theta
+* Rho
+
+for analytical and simulation-based pricing.
+
+---
+
+# American Option Pricing
+
+Supports:
+
+* American Call Options
+* American Put Options
+
+## Numerical Methods
+
+### Least Squares Monte Carlo (LSMC)
+
+* Models optimal early exercise strategy
+* Uses regression-based continuation value estimation
+
+### Binomial Tree Method
+
+* Recursive option valuation framework
+* Supports early exercise decisions
+
+---
+
+# Exotic Option Pricing
+
+Supports pricing of path-dependent derivatives.
+
+## Asian Options
+
+* Average price payoff calculation
+* Monte Carlo-based pricing
+
+## Barrier Options
+
+Supports:
+
+* Up-In Options
+* Down-In Options
+
+Barrier conditions are simulated dynamically using GBM price paths.
+
+---
+
+# Monte Carlo Simulation Engine
+
+The application simulates stock prices using Geometric Brownian Motion (GBM).
+
+## GBM Equation
+
+dS_t = \mu S_t dt + \sigma S_t dW_t
+
+where:
+
+* ( \mu ) = drift
+* ( \sigma ) = volatility
+* ( dW_t ) = Brownian motion
+
+---
+
+# Interactive Visualizations
+
+The application includes several visual analytics features:
+
+* Simulated GBM stock price paths
+* Monte Carlo convergence plots
+* Greeks visualization
+* Option price comparison charts
+* Sensitivity analysis plots
+
+---
+
+# Streamlit User Interface
+
+The project includes a clean interactive UI built with Streamlit.
+
+## User Controls
+
+Users can dynamically configure:
+
+* Strike Percentage
+* Time to Maturity (T)
+* Risk-Free Interest Rate (r)
+* Number of Simulations (M)
+* Number of Timesteps (N)
+* Volatility assumptions
+
+---
+
+# Tech Stack
+
+| Category              | Technology  |
+| --------------------- | ----------- |
+| Programming Language  | Python 3.9+ |
+| Frontend/UI           | Streamlit   |
+| Numerical Computing   | NumPy       |
+| Data Analysis         | Pandas      |
+| Visualization         | Matplotlib  |
+| Financial Data API    | yfinance    |
+| Statistical Functions | SciPy       |
+
+---
+
+# Installation
+
+## Clone Repository
+
+```bash
+git clone https://github.com/Nitya-sigadapu/monte_carlo-option.git
+cd monte_carlo-option
+```
+
+---
+
+## Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Run Application
+
+```bash
+streamlit run app.py
+```
+
+---
+
+# Hosted Deployments
+
+The applications are deployed using Streamlit Cloud for public access and demonstration.
+
+## European Option Pricing App
+
+Includes:
+
+* Monte Carlo Simulation
+* Black-Scholes Pricing
+* Greeks Visualization
+* GBM Path Simulation
+
+Deployment Link:
+
+[European Option Pricing App](https://montecarlooption-g8o9uw9f9cburuj23zjbaw.streamlit.app/?utm_source=chatgpt.com)
+
+---
+
+## American & Barrier Option Pricing App
+
+Includes:
+
+* American Option Pricing
+* LSMC Method
+* Binomial Tree Method
+* Barrier Options (Up-In / Down-In)
+* Asian Options
+
+Deployment Link:
+
+[American & Barrier Option Pricing App](https://americanbarrieroptions-phtwj55ba4bjo4sjb2myjr.streamlit.app/?utm_source=chatgpt.com)
+
+---
+
+# How It Works
+
+1. Pulls historical stock price data using Yahoo Finance
+2. Estimates volatility using log returns
+3. Simulates Geometric Brownian Motion stock paths
+4. Computes discounted expected payoffs
+5. Prices derivatives using:
+
+   * Monte Carlo methods
+   * Black-Scholes formula
+   * LSMC
+   * Binomial Trees
+6. Computes Greeks and sensitivity metrics
+7. Displays visualizations and pricing outputs
+
+---
+
+# Sample Results
+
+# European Options
+
+## Monte Carlo Method
+
+| Metric            | Value   |
+| ----------------- | ------- |
+| Put Option Price  | ₹195.88 |
+| Call Option Price | ₹82.62  |
+
+## Greeks (Call Option)
+
+| Greek | Value   |
+| ----- | ------- |
+| Delta | 0.41    |
+| Gamma | -0.00   |
+| Vega  | 452.87  |
+| Theta | -158.50 |
+| Rho   | 288.53  |
+
+---
+
+## Black-Scholes Model
+
+| Metric            | Value   |
+| ----------------- | ------- |
+| Put Option Price  | ₹82.73  |
+| Call Option Price | ₹199.86 |
+
+## Greeks
+
+| Greek | Value   |
+| ----- | ------- |
+| Delta | 0.40    |
+| Gamma | 0.00    |
+| Vega  | 439.66  |
+| Theta | -152.94 |
+| Rho   | 281.31  |
+
+---
+
+# Future Improvements
+
+* GPU-accelerated simulations
+* Variance reduction techniques
+* Heston stochastic volatility model integration
+* Implied volatility surface visualization
+* Greeks heatmaps and 3D visualizations
+* Multi-asset option pricing
+* Portfolio risk analysis dashboard
+* Unit testing and CI/CD integration
+
+---
+
+# References
+
+1. Quant Guild
+   https://youtu.be/-1RYvajksjQ
+
+2. Very Normal
+   https://youtu.be/Cb-GwN6jhNE
+
+3. Option Pricing Models Repository
+   https://github.com/just-krivi/option-pricing-models
+
+4. Monte Carlo Pricing Tutorial
+   https://youtu.be/OdWLP8umw3A
+
+5. Quantitative Finance Tutorial
+   https://youtu.be/r7cn3WS5x9c
+
+---
+
+# Authors
+
+* Nitya Sigadapu
+  https://github.com/Nitya-sigadapu
+
+* Charan Malladi
+  https://github.com/thchrn
+
+* Prayuktha Lucky Reddy
+  https://github.com/Prayuktha-Lucky-Reddy
+
+---
+
+# License
+
+This project is licensed under the MIT License.
+
+---
+
+# Contributions
+
+Contributions, suggestions, and pull requests are welcome.
+
+Feel free to fork the repository and improve the project.
