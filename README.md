@@ -4,7 +4,7 @@
 
 ### European Option Pricing App
 
-[European Option Pricing App](https://montecarlooption-g8o9uw9f9cburuj23zjbaw.streamlit.app/?utm_source=chatgpt.com)
+[European Option Pricing App](https://montecarlooption-g8o9uw9f9cburuj23zjbaw.streamlit.app)
 
 Features included:
 
