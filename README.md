@@ -4,7 +4,7 @@
 
 ### European Option Pricing App
 
-[European Option Pricing App](https://montecarlooption-g8o9uw9f9cburuj23zjbaw.streamlit.app)
+[European Option Pricing App](https://montecarlooption-g8o9uw9f9cburuj23zjbaw.streamlit.app/)
 
 Features included:
 
@@ -130,15 +130,21 @@ Barrier conditions are simulated dynamically using GBM price paths.
 
 The application simulates stock prices using Geometric Brownian Motion (GBM).
 
-## GBM Equation
+## Geometric Brownian Motion (GBM)
 
+The underlying stock price dynamics are modeled as:
+
+$$
 dS_t = \mu S_t dt + \sigma S_t dW_t
+$$
 
 where:
 
-* ( \mu ) = drift
-* ( \sigma ) = volatility
-* ( dW_t ) = Brownian motion
+- **$S_t$** = stock price at time $t$
+- **$\mu$** = expected return (drift)
+- **$\sigma$** = volatility
+- **$W_t$** = Wiener process (Brownian motion)
+- **$dW_t$** = infinitesimal increment of the Wiener process
 
 ---
 
@@ -340,13 +346,13 @@ Deployment Link:
 
 # Authors
 
-* Nitya Sigadapu
+* Nitya
   https://github.com/Nitya-sigadapu
 
-* Charan Malladi
+* Charan
   https://github.com/thchrn
 
-* Prayuktha Lucky Reddy
+* Prayuktha
   https://github.com/Prayuktha-Lucky-Reddy
 
 ---
