@@ -22,10 +22,10 @@ Features included:
 Features included:
 
 * American Option Pricing
-* LSMC Method
+* LSMC (Least Squares Monte Carlo) Method
 * Binomial Tree Method
 * Barrier Options
-* Asian Options
+* Asian Options 
 
 ---
 ## Project Overview
